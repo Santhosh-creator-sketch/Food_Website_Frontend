@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering Service 🍕🍰</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fdf7e3, #fff6a9);
+            color: #444;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #ff6600 !important;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #ffcc00 !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('./pexels-pixabay-262978.jpg') center/cover no-repeat;
+            height: 80vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            animation: fadeIn 1.5s;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .btn-custom {
+            background-color: #ffcc00;
+            color: #333;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #ff4500;
+            transform: scale(1.1);
+        }
+
+        /* Services Section */
+        .card {
+            transition: transform 0.4s, box-shadow 0.3s;
+            border-radius: 12px;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .card img {
+            transition: transform 0.4s;
+        }
+        .card:hover img {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: #ffcc00;
+            color: #333;
+            text-align: center;
+            padding: 80px 0;
+            animation: pulse 2s infinite;
+        }
+
+        /* Birthday Popup */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            background: #ffcc00;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            animation: zoomIn 0.8s;
+            text-align: center;
+        }
+        .popup h2 {
+            color: #333;
+            font-size: 2.5rem;
+        }
+        .popup p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .popup button {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .popup button:hover {
+            background: #ff4500;
+        }
+
+        /* Footer */
+        .footer {
+            background: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #ffcc00;
+            transition: color 0.3s;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            color: #ff4500;
+        }
+        .footer .social-icons i {
+            font-size: 24px;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+        .footer .social-icons i:hover {
+            transform: scale(1.3);
+            color: #ff6600;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">🍽️ Catering Service</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="booking.html">Book Catering</a></li>
+                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+    <div class="text-center">
+        <h1>🍕 Delicious Catering, 🍰 Exceptional Service</h1>
+        <p class="lead">Treat your guests to a flavorful experience.</p>
+        <a href="#" class="btn btn-custom btn-lg">Book Now</a>
+    </div>
+</div>
+
+<!-- Services Section -->
+<div class="container my-5">
+    <h2 class="text-center text-warning">🍔 Our Services 🍷</h2>
+    <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+            <div class="card">
+                <img src="./food.png" class="card-img-top" alt="Buffet">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Buffet Catering</h5>
+                    <p>Delicious buffet spreads for all occasions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+<div class="cta-section">
+    <h2>🎉 Special Birthday Offer! 🎂</h2>
+    <button onclick="showPopup()" class="btn btn-dark btn-lg">🎁 Get Special Offer</button>
+</div>
+
+<!-- Birthday Popup -->
+<div id="popup" class="popup">
+    <h2>🎂 Birthday Special Offer! 🎁</h2>
+    <p>Get 20% off for your birthday party booking!</p>
+    <button onclick="closePopup()">Close</button>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>Developed by <strong>Santhosh</strong> | Follow us:  
+        <a href="https://www.instagram.com/lovely_sandy_008/?igsh=MTF5c3J1dGc1aGs5cQ%3D%3D#" target="_blank" class="social-icons">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+    </p>
+</footer>
+
+<script>
+    function showPopup() { document.getElementById('popup').style.display = 'block'; }
+    function closePopup() { document.getElementById('popup').style.display = 'none'; }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
